@@ -39,7 +39,7 @@ const [loadingCompare, setLoadingCompare] = useState(false);
   const formData = new FormData();
   formData.append("resume", resumeFile);
 
-  const res = await fetch("http://localhost:8080/api/resume/improve", {
+  const res = await fetch("https://ai-resume-analyzer-1-x8n5.onrender.com/api/resume/improve", {
     method: "POST",
     body: formData,
   });
@@ -69,7 +69,7 @@ const runCompare = async () => {
   formData.append("resume", resumeFile);
   formData.append("jd", jdText);
 
-  const res = await fetch("http://localhost:8080/api/resume/compare", {
+  const res = await fetch("https://ai-resume-analyzer-1-x8n5.onrender.com/api/resume/compare", {
     method: "POST",
     body: formData,
   });
